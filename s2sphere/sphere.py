@@ -1481,7 +1481,7 @@ class CellId(object):
         if cls.PROJECTION == cls.LINEAR_PROJECTION:
             return 0.5 * (u + 1)
         elif cls.PROJECTION == cls.TAN_PROJECTION:
-            return (2 * (1.0 / math.pi)) * (math.atan(u) * math.pi / 4.0)
+            return (2 * (1.0 / math.pi)) * (math.atan(u) + math.pi / 4.0)
         elif cls.PROJECTION == cls.QUADRATIC_PROJECTION:
             if u >= 0:
                 return 0.5 * math.sqrt(1 + 3 * u)
